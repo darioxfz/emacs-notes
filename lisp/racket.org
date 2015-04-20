@@ -1,0 +1,49 @@
+* Basics
+Many things in racket are polyvariadic meaning that they can take any number of arguments
+>(+ 1 1 1 1 2 2 3)
+** Expressions
+
+>(+ 2 2)
+
+>(- 2 2)
+
+>(/ 4)
+
+>(max 2 3 3 4)
+
+exponents
+>(expt 2 3)
+
+
+substrings
+>(substring "this is nice" 3 6)
+
+>(length '(0 1 2 3))
+
+** Definitions and interactions
+
+-define a function
+
+>(define id expr)
+
+**  Lists, Iteraction and Recursion
+
+-first element of a list
+
+>(car 1 2 3 4) or (first 1 2 3 4)
+
+-rest of the list
+
+>(cdr 1 2 3 4) or (rest 1 2 3 4)
+
+** others
+
+time
+i can time how long my functions take to compute using the time function form base library
+
+(time (function x) #t)
+
+#t in the end means only the time that function took computing will be shown
+
+
+

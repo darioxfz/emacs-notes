@@ -1,0 +1,21 @@
+* Basics
+** Expressions
+
+>(+ 2 2)
+
+exponents
+>(expt 2 3)
+
+
+substrings
+>(substring "this is nice" 3 6)
+
+>(length '(0 1 2 3))
+
+** Definitions and interactions
+
+-define a function
+
+>(define id expr)
+
+
