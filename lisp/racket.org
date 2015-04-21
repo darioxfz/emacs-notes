@@ -1,18 +1,65 @@
 * Basics
 Many things in racket are polyvariadic meaning that they can take any number of arguments
->(+ 1 1 1 1 2 2 3)
-** Expressions
+> (+ 1 1 1 1 2 2 3)
 
->(+ 2 2)
+In DRracket the first line should be the definition of what language we are using
+> lang racket
 
->(- 2 2)
+Comments
 
->(/ 4)
+- Single line comments
+> ; single line comments start with a semicolon
+- Multiple line comments
+> #| this can be multiple line #|
 
->(max 2 3 3 4)
+** Data Types and Operators
 
-exponents
->(expt 2 3)
+Everything in racket is list with the following format
+(function op1 op2 op3 op4)
+if you dont want your list to get evaluated use '(function op1 .. op4)
+
+# Numbers
+> 9         ; integer
+> #b000     ; binary
+> #o000     ; octal
+> #x000     ; hexadecimal
+> 3.14      ; real
+> 3.02e+25  ; real
+> 1/2       ; rational
+> 1+1i      ; complex numbers
+
+# Arithmetic operations
+> (+ 2 2)
+> (- 2 2)
+> (/ 4)
+> (/ 4 2)
+> (* 5 5)
+> (expt 2 3)
+> (quotient 3 2)
+> (remainder 3 2)
+> (exact->inexact 1/5)
+> (+ 1+2i 2-1i)
+
+# Strings
+> (string-append "hey" "you!") ; will append the two strings
+> (string-ref "potato" 0) ; will return p
+> (printf "phrase")
+
+# Boolean Algebra operators
+> #t
+> #f
+> (not #t)
+> and
+> or
+
+# Variables
+a variable name can use any character including unicode ones with the exception of : []{}()"'`,;#|\
+> (define variable-name 10)
+
+?local binding?
+
+> (max 2 3 3 4)
+
 
 
 substrings
@@ -20,7 +67,9 @@ substrings
 
 >(length '(0 1 2 3))
 
-** Definitions and interactions
+** Functions
+
+?lambda?
 
 -define a function
 
@@ -44,6 +93,3 @@ i can time how long my functions take to compute using the time function form ba
 (time (function x) #t)
 
 #t in the end means only the time that function took computing will be shown
-
-
-
